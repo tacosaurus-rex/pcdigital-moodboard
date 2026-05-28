@@ -43,7 +43,20 @@ What "one-shot pull whatever you need" means in practice:
    screen. Work out why it persuades or delights: layout, hierarchy, proof devices,
    progressive disclosure, branding cohesion, motion, social proof, positioning. Connect it
    back to what I reacted to, and end with a "steal this" line of concrete, reusable lessons.
-6. File everything and show me the screenshots so I can confirm the capture is not broken.
+6. File everything locally and show me the screenshots so I can confirm the capture is not broken.
+7. Publish, so claude design and anything else can reference it. Two destinations, both required:
+   a. **GitHub.** From `~/moodboard/`, `git add .` and commit with a Conventional Commit
+      message (`feat(moodboard): <brand> reference`), then `git push` to
+      `github.com/tacosaurus-rex/pcdigital-moodboard` (public). The push makes every PNG
+      and `.webm` reachable at `raw.githubusercontent.com/tacosaurus-rex/pcdigital-moodboard/main/<folder>/<filename>`.
+   b. **Notion.** Create a row in the PCDIGITAL Moodboard database via the Notion MCP
+      (`mcp__claude_ai_Notion__notion-create-pages` with parent
+      `data_source_id: 1f19e820-43f3-48c6-aee6-d0b2d12cd510`). Set properties:
+      `Brand`, `Folder`, `Source URL`, `date:Captured:start` (`"YYYY-MM-DD"`),
+      `date:Captured:is_datetime` (`0`), `Tags` (JSON-encoded string array). Page content
+      mirrors the notes.md entry (Reaction, Why this works, Steal this) with each
+      screenshot embedded via its raw GitHub URL. Use the same emoji icon family as the
+      existing entries (food brand = 🌱, water/hydration = 🌊, energy = ⚡, etc.).
 
 ### Tools (all live in this folder)
 
@@ -81,8 +94,20 @@ Why this works: <2 to 6 bullets, read-between-the-lines, not a transcript>
 Steal this: <one line of concrete reusable lessons>
 ```
 
+### Publishing destinations
+
+- **Local source of truth**: `C:\Users\jay3y\moodboard\` (this folder).
+- **Public mirror (image host)**: https://github.com/tacosaurus-rex/pcdigital-moodboard
+  (public; raw URLs at `raw.githubusercontent.com/tacosaurus-rex/pcdigital-moodboard/main/...`).
+- **claude design surface**: Notion database "🎨 PCDIGITAL Moodboard" under the Claude
+  Projects parent. Database URL: https://www.notion.so/ca3727007fcb428aa4a592c98b8629a7
+  Data source ID: `1f19e820-43f3-48c6-aee6-d0b2d12cd510` (use with `data_source_id` when
+  creating pages). Schema: `Brand` (title), `Folder` (select), `Source URL` (url),
+  `Captured` (date), `Tags` (multi-select).
+
 ### Conventions
 
 - Canadian English. No em dashes.
 - Best shot at hands-off: only ask a question when a choice genuinely changes the output.
-- See the worked example in `pdp-ecommerce/notes.md` (Zero Acre + Buoy) for the bar.
+- See the worked examples in `pdp-ecommerce/notes.md` (Zero Acre, Buoy, Foreign Waters)
+  and the matching Notion rows for the bar.
