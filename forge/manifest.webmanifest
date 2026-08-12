@@ -1,0 +1,19 @@
+{
+  "name": "FORGE Training OS",
+  "short_name": "FORGE",
+  "description": "A local-first training operating system for athletes who lift.",
+  "start_url": "./index.html#/home",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0d0c",
+  "theme_color": "#d8ff63",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
